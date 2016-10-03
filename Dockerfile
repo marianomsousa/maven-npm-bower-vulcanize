@@ -20,3 +20,6 @@ RUN set -x \
 	&& rm docker.tgz \
 	&& docker -v
 ENV DOCKER_HOST='tcp://docker:2375'
+#Docker Compose
+RUN curl -L https://github.com/docker/compose/releases/download/1.8.0/docker-compose-`uname -s`-`uname -m` > /usr/local/bin/docker-compose && chmod +x /usr/local/bin/docker-compose
+
